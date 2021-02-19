@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    background-color: #eaeaea;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    margin-left: 15px !important;
+}
+
+.btn-save {
+    background-color: #4caf50;
+    color: #FFF;
+}
+
+.sub-category {
+    margin-top: 15px;
+}
+
+.content {
+    margin: 30px;
+}
+
+.new-category {
+    background-color: #FFF !important;
+    width: 358px !important;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+.mat-raised-button, .mat-stroked-button, input, label, .title {
+    letter-spacing: 1px !important;
+}
+
+.item {
+    background: #FFF;
+    padding: 15px;
+    height: 36px;
+    border-radius: 5px;
+}
+
+.item-name {
+    padding: 10px;
+    background: #efefef;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #999;
+}
