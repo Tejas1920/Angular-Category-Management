@@ -1,30 +1,25 @@
-<mat-toolbar color="primary">
-  <span class="title">Category Management Solution</span>
-</mat-toolbar>
-<section class="content">
+<section class="category-management">
   <ul style="padding-left: 0px;">
     <li class="sub-category" *ngFor="let c of categories; let i = index">
       <app-category [(id)]="id" [category]="c" (deleteEvent)="deleteCategory($event)"
         (addSubCategoryEvent)="addSubCategory($event)"></app-category>
     </li>
   </ul>
-
   <div>
-    <button style="margin-left: 0px !important;" mat-stroked-button color="primary" *ngIf="!newCategory"
+    <button style="margin-left: 0px !important;" mat-flat-button color="basic" *ngIf="!newCategory"
       (click)="newCategory = true">New</button>
     <div class="new-category" *ngIf="newCategory">
       <input matInput type="text">
-
       <mat-form-field class="example-full-width">
         <mat-label>Category Name</mat-label>
         <input matInput [(ngModel)]="category.Name">
       </mat-form-field>
-
       <button mat-raised-button color="primary" (click)="saveCategory()">Save</button>
       <button mat-stroked-button color="warn" (click)="newCategory = false">
         Cancel
       </button>
     </div>
   </div>
-
+  <button style="margin-left: 0px !important;" mat-flat-button color="basic" *ngIf="categories.length > 0"
+    (click)="CreateJSON()">Create JSON</button>
 </section>
